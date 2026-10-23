@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Autonomous self-improvement experiment record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "observed_problem", "decision", "baseline", "evaluation", "outcome", "rollback"],
+  "properties": {
+    "id": {"type": "string"},
+    "observed_problem": {"type": "string"},
+    "evidence": {"type": "array", "items": {"type": "string"}},
+    "decision": {"type": "string"},
+    "delegation": {"type": "string"},
+    "baseline": {"type": "string"},
+    "change": {"type": "string"},
+    "evaluation": {"type": "string"},
+    "outcome": {"enum": ["improved", "unchanged", "regressed", "inconclusive", "not-executed"]},
+    "cost": {"type": "string"},
+    "regressions": {"type": "array", "items": {"type": "string"}},
+    "rollback": {"type": "string"},
+    "next_action": {"type": "string"},
+    "security_change_proposed": {"type": "boolean"}
+  }
+}

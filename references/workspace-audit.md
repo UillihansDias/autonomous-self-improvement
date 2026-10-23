@@ -1,0 +1,9 @@
+# Workspace audit protocol
+
+Use when evidence indicates workspace or skill documentation may be causing repeat failures. This operational checklist adapts the user-provided *Autonomous Workspace & Skill Audit Protocol*.
+
+1. Inspect accessible recent sessions and `.learnings/`. Count retries, malformed tool arguments, and corrected misunderstandings of workspace conventions. Investigate patterns occurring at least twice; exclude isolated network blips. Don't claim access to logs that are not available.
+2. Compare every recently used skill's `SKILL.md` paths, CLI flags, prerequisites and boundaries with **observed successful execution**. Patch only verified mismatches; add the exact working command and smallest runnable check. Do not invent a verified flag or execution result.
+3. Promote a repeatedly validated tool quirk to `TOOLS.md`, general workflow convention to `AGENTS.md`, and reusable multi-step procedure to an appropriate `SKILL.md`. Remove its `.learnings/` entry after verifying promotion. Evaluate entries unused for two weeks for removal, but first confirm that retention, recovery or security requirements do not apply.
+4. Optimise for **higher reliability with fewer total Markdown tokens**. Before adding instructions, find redundant or stale material to prune; aim to merge/delete two lines for each added rule without erasing necessary operational constraints. Prefer surgical patches to full rewrites. Resolve contradictions based on the most recent **verified** successful execution only where instruction priority and security boundaries permit.
+5. Record a brief before/after token count using a consistently applied counting method (or explicitly label bytes/words as proxies), the failure corrected, tests performed, and rollback location. Flag changes to security or confirmation rules in the report; do not execute them without existing authorisation.
